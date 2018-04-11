@@ -3,11 +3,9 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<String> inputs = FileUtils.readFile(new File(new File("src").exists() ? "src/SampleInput.txt" : "SampleInput.txt"));
-        for (int i = 0; i < inputs.size(); i++)
-            inputs.set(i, formatWithComma(inputs.get(i)));
+        ArrayList<Long> inputs = FileUtils.readFile(new File(new File("src").exists() ? "src/SampleInput.txt" : "SampleInput.txt"));
 
-        inputs.forEach(System.out::println);
+        inputs.forEach(input -> System.out.println(formatWithComma(Long.toString(input))));
 
     }
 

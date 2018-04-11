@@ -11,13 +11,13 @@ public class FileUtils {
      * @param file Text file
      * @return Queue of elements in file
      */
-    public static ArrayList<String> readFile(File file) {
+    public static ArrayList<Long> readFile(File file) {
         String             tempInput;
-        ArrayList<String> countryInfo = new ArrayList<>();
+        ArrayList<Long> countryInfo = new ArrayList<>();
 
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             while ((tempInput = br.readLine()) != null) {
-                countryInfo.add(tempInput);
+                countryInfo.add(Long.parseLong(tempInput));
             }
         } catch (IOException io) {
             io.printStackTrace();
