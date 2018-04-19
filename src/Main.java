@@ -9,6 +9,11 @@ public class Main {
 
     }
 
+    /**
+     * Add commas between every third digit of a number
+     * @param input Valid int or long input
+     * @return String with commas added in every third digit
+     */
     public static String formatWithComma(String input) {
         if (input.length() <= 3)
             return input;
