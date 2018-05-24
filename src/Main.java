@@ -35,7 +35,7 @@ public class Main {
             return formatWithComma(div) + "," + "00" + Long.toString(mod);
 
         if (mod < 100)
-            return formatWithComma(div + "," + "0" + Long.toString(mod);
+            return formatWithComma(div + "," + "0" + Long.toString(mod));
 
         return formatWithComma(div) + "," + Long.toString(mod);
     }
